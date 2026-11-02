@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Bean & Brew Coffee Shop | Fresh Coffee & Delicious Snacks</title>
+
+    <meta name="description"
+        content="Welcome to Bean & Brew Coffee Shop. Enjoy freshly brewed coffee, cappuccino, latte, cold coffee, snacks and desserts in a cozy atmosphere.">
+
+    <meta name="keywords"
+        content="coffee shop, cafe, coffee, cappuccino, latte, cold coffee, cafe near me, best coffee shop">
+
+    <meta name="author" content="Bean & Brew Coffee Shop">
+
+    <!-- Search Engine -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Bean & Brew Coffee Shop">
+    <meta name="description" >
+    <meta property="og:description"
+        content="Freshly brewed coffee, delicious snacks and a cozy place to relax.">
+    <meta property="og:type" content="website">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6f4e37">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf5;
+            color: #2d1b12;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            background: #3e2723;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #d7a86e;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d7a86e;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+
+            background:
+                linear-gradient(rgba(40, 20, 10, 0.72),
+                rgba(40, 20, 10, 0.72)),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 750px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 span {
+            color: #d7a86e;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #c68b59;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #a86f42;
+            transform: translateY(-2px);
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .about-text h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* ================= MENU ================= */
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .menu-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .menu-card p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #a5683e;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* ================= OFFER ================= */
+
+        .offer {
+            background: #4e342e;
+            color: white;
+            text-align: center;
+        }
+
+        .offer h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .offer p {
+            margin-bottom: 25px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #a5683e;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #2b1a16;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #3e2723;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                Bean <span>&</span> Brew
+            </div>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Fresh Coffee,
+                <span>Good Vibes.</span>
+            </h1>
+
+            <p>
+                Experience freshly brewed coffee, delicious snacks
+                and a cozy atmosphere at Bean & Brew Coffee Shop.
+            </p>
+
+            <a href="#menu" class="btn">
+                Explore Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Our Coffee Shop</h2>
+                <p>More than just coffee — it's an experience.</p>
+            </div>
+
+            <div class="about">
+
+                <img
+                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80"
+                    alt="Coffee shop interior">
+
+                <div class="about-text">
+
+                    <h2>Made With Passion ☕</h2>
+
+                    <p>
+                        At Bean & Brew, we believe that great coffee
+                        brings people together.
+                    </p>
+
+                    <p>
+                        Our coffee beans are carefully selected and
+                        freshly brewed to give you the perfect taste
+                        every time.
+                    </p>
+
+                    <p>
+                        Whether you want to work, relax or meet friends,
+                        our cafe is the perfect place for you.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section id="menu">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Popular Menu</h2>
+
+                <p>
+                    Freshly prepared just for you
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <div class="icon">☕</div>
+
+                    <h3>Espresso</h3>
+
+                    <p>
+                        Strong and rich classic espresso.
+                    </p>
+
+                    <div class="price">
+                        ₹120
+                    </div>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="icon">🥛</div>
+
+                    <h3>Cappuccino</h3>
+
+                    <p>
+                        Smooth coffee with creamy foam.
+                    </p>
+
+                    <div class="price">
+                        ₹160
+                    </div>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="icon">🧊</div>
+
+                    <h3>Cold Coffee</h3>
+
+                    <p>
+                        Chilled and refreshing coffee.
+                    </p>
+
+                    <div class="price">
+                        ₹180
+                    </div>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="icon">🍰</div>
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>
+                        Delicious soft chocolate cake.
+                    </p>
+
+                    <div class="price">
+                        ₹150
+                    </div>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="icon">🥪</div>
+
+                    <h3>Cheese Sandwich</h3>
+
+                    <p>
+                        Crispy sandwich loaded with cheese.
+                    </p>
+
+                    <div class="price">
+                        ₹140
+                    </div>
+
+                </div>
+
+
+                <div class="menu-card">
+
+                    <div class="icon">🍪</div>
+
+                    <h3>Cookies</h3>
+
+                    <p>
+                        Freshly baked crunchy cookies.
+                    </p>
+
+                    <div class="price">
+                        ₹80
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFER ================= -->
+
+    <section class="offer">
+
+        <div class="container">
+
+            <h2>☕ Special Coffee Offer</h2>
+
+            <p>
+                Get 20% OFF on your first order!
+            </p>
+
+            <a href="#contact" class="btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Have a question? Send us a message.
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label>Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Message</label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn submit-btn">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Bean & Brew Coffee Shop.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Mobile Menu
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        // Close mobile menu after clicking link
+        document.querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    document
+                        .getElementById("navLinks")
+                        .classList.remove("active");
+
+                });
+
+            });
+
+
+        // Contact Form
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value;
+
+                alert(
+                    "Thank you " +
+                    name +
+                    "! Your message has been received."
+                );
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+</html>
